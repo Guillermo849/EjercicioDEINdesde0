@@ -1,1 +1,6 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.button {
+	-fx-background-color: rgb(149, 78, 130);
+	-fx-text-fill: rgb(0, 0 ,0);
+
+}
