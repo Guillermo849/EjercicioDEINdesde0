@@ -46,7 +46,8 @@ public class Main extends Application {
 	// Este metodo comprueba si el nombre coincide con el nombre Ovi Wan
 	private String esKenobi(String nombre) {
 		if (nombre.equals("Obi Wan")) {
-			return "Kenobi";
+			alertaGrievous();
+			return "";
 		} if (nombre.equals("")) {
 			return "";
 		} else {
@@ -54,7 +55,15 @@ public class Main extends Application {
 		}
 	}
 	
-	
+	// Abre una ventana de Aviso
+	private void alertaGrievous() {
+		Alert alerta = new Alert(Alert.AlertType.WARNING);
+		alerta.setHeaderText(null);
+		alerta.setTitle("General Grievous");
+		alerta.setContentText("General Kenobi!");
+		alerta.showAndWait();
+		
+	}
 	
 	public static void main(String[] args) {
 		launch(args);
