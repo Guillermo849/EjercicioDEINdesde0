@@ -21,6 +21,10 @@ public class Main extends Application {
 		Label lblNombre = new Label("Introduzca su nombre");
 		Label lblGenerico = new Label("");
 		Button btnCerrar = new Button("Cerrar");
+		// Añadimos al botón de cerrar la acción de cerrar el programa
+		btnCerrar.setOnAction(e -> {
+			Platform.exit();
+			});
 		// Creamos el contenedor donde se guardarán todos los anteriores objetos
 		VBox caja = new VBox();
 		caja.getChildren().addAll(lblNombre, tfNombre, lblGenerico, btnCerrar);
