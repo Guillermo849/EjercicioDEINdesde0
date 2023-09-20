@@ -25,6 +25,11 @@ public class Main extends Application {
 		btnCerrar.setOnAction(e -> {
 			Platform.exit();
 			});
+		// Cuando se pulse Enter se ejecutará el metodo esKenobi
+		tfNombre.setOnAction(e -> {
+			lblGenerico.setText(esKenobi(tfNombre.getText()));
+			});
+
 		// Creamos el contenedor donde se guardarán todos los anteriores objetos
 		VBox caja = new VBox();
 		caja.getChildren().addAll(lblNombre, tfNombre, lblGenerico, btnCerrar);
@@ -37,6 +42,19 @@ public class Main extends Application {
 		primaryStage.setResizable(false);
 		primaryStage.show();
 	}
+	
+	// Este metodo comprueba si el nombre coincide con el nombre Ovi Wan
+	private String esKenobi(String nombre) {
+		if (nombre.equals("Obi Wan")) {
+			return "Kenobi";
+		} if (nombre.equals("")) {
+			return "";
+		} else {
+			return "Hola " + nombre;
+		}
+	}
+	
+	
 	
 	public static void main(String[] args) {
 		launch(args);
