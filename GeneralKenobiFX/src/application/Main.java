@@ -19,7 +19,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		TextField tfNombre = new TextField();
 		Label lblNombre = new Label("Introduzca su nombre");
-		Label lblGenerico = new Label("");
+		Label lblSaludar = new Label("");
 		Button btnCerrar = new Button("Cerrar");
 		// Añadimos al botón de cerrar la acción de cerrar el programa
 		btnCerrar.setOnAction(e -> {
@@ -27,12 +27,12 @@ public class Main extends Application {
 			});
 		// Cuando se pulse Enter se ejecutará el metodo esKenobi
 		tfNombre.setOnAction(e -> {
-			lblGenerico.setText(esKenobi(tfNombre.getText()));
+			lblSaludar.setText(esKenobi(tfNombre.getText()));
 			});
 
 		// Creamos el contenedor donde se guardarán todos los anteriores objetos
 		VBox caja = new VBox();
-		caja.getChildren().addAll(lblNombre, tfNombre, lblGenerico, btnCerrar);
+		caja.getChildren().addAll(lblNombre, tfNombre, lblSaludar, btnCerrar);
 
 		Scene scene = new Scene(caja,400,400);
 		// Añadimos a la Scene la hoja de estilos CSS
